@@ -1,0 +1,16 @@
+{
+    "name": "CreepyAlchemist.Editor",
+    "rootNamespace": "Example2D.CreepyAlchemist.Editor",
+    "references": [
+        "GUID:f675b79805e14b945b5b820511da8e3e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
