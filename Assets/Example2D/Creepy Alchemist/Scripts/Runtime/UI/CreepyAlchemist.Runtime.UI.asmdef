@@ -1,0 +1,17 @@
+{
+    "name": "CreepyAlchemist.Runtime.UI",
+    "rootNamespace": "Example2D.CreepyAlchemist.Runtime.UI",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:cd2d6c7c74003064cb0b6c7f8c380ebb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

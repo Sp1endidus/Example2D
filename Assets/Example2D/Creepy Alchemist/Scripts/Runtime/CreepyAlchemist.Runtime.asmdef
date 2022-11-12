@@ -1,0 +1,14 @@
+{
+    "name": "CreepyAlchemist.Runtime",
+    "rootNamespace": "Example2D.CreepyAlchemist.Runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

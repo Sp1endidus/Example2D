@@ -1,0 +1,14 @@
+{
+    "name": "Common.Runtime.Configs",
+    "rootNamespace": "Example2D.Common.Runtime.Configs",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
