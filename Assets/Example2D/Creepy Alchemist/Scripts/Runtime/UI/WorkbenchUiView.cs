@@ -1,0 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Example2D.Common.Runtime {
+	public class WorkbenchUiView : MonoBehaviour {
+		
+	}
+}

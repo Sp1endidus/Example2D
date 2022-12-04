@@ -12,16 +12,19 @@ namespace Example2D.CreepyAlchemist.Runtime.Bootstrap {
         private SignalBus _signalBus;
         private ConfigsController _configsController;
         private StatesController _statesController;
+        private SceneController _sceneController;
 
         private float _loadingProgress;
 
         [Inject]
         private void Construct(SignalBus signalBus,
             ConfigsController configsController,
-            StatesController statesController) {
+            StatesController statesController,
+            SceneController sceneController) {
             _signalBus = signalBus;
             _configsController = configsController;
             _statesController = statesController;
+            _sceneController = sceneController;
         }
 
         private void Start() {
@@ -34,12 +37,23 @@ namespace Example2D.CreepyAlchemist.Runtime.Bootstrap {
 
             Logs.Log($"Loading configs...");
             await UniTask.WaitUntil(() => _configsController.IsLoaded);
-            Logs.Log($"Configs are loaded.");
+            Logs.Log($"Configs have been loaded.");
             AddProgress(0.1f);
 
             Logs.Log($"Loading states...");
             await UniTask.WaitUntil(() => _statesController.IsLoaded);
-            Logs.Log($"States are loaded.");
+            Logs.Log($"States have been loaded.");
+            AddProgress(0.1f);
+
+            Logs.Log($"Loading scenes...");
+            bool scenesLoaded = false;
+            _sceneController.LoadCore(() => {
+                _sceneController.LoadGameplay(() => {
+                    scenesLoaded = true;
+                });
+            });
+            await UniTask.WaitUntil(() => scenesLoaded);
+            Logs.Log($"Scenes have been loaded");
             AddProgress(0.1f);
 
             Logs.Log($"Loading is complete!");

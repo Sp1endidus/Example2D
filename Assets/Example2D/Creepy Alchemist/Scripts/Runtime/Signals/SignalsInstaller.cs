@@ -12,6 +12,7 @@ namespace Example2D.CreepyAlchemist.Runtime.Signals {
 
         private void DeclareCommon() {
             Container.DeclareSignal<SignalBootstrapLoadingProgressChanged>();
+            Container.DeclareSignal<SignalCanvasStateChanged>();
         }
     }
 }

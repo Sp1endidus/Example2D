@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,8 +30,26 @@ namespace Example2D.CreepyAlchemist.Runtime.Bootstrap {
 
         }
 
-        private void LoadScene(AssetReference asset, LoadSceneMode mode = LoadSceneMode.Additive) {
-            var hanlder = asset.LoadSceneAsync(mode);
+        public void LoadCore(Action callback) {
+            LoadScene(core, () => {
+                LoadScene(coreUi, callback);
+            });
+        }
+
+        public void LoadGameplay(Action callback) {
+            LoadScene(gameplay, () => {
+                LoadScene(gameplayUi, callback);
+            });
+        }
+
+        private void LoadScene(AssetReference asset, Action callback = null,
+            LoadSceneMode mode = LoadSceneMode.Additive) {
+            var handler = asset.LoadSceneAsync(mode);
+            if (callback != null) {
+                handler.Completed += result => {
+                    callback();
+                };
+            }
         }
 	}
 }

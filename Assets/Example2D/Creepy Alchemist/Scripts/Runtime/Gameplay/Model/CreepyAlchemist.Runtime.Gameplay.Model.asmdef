@@ -1,0 +1,14 @@
+{
+    "name": "CreepyAlchemist.Runtime.Gameplay.Model",
+    "rootNamespace": "Example2D.CreepyAlchemist.Runtime.Gameplay.Model",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
