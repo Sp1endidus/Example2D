@@ -4,9 +4,9 @@ using System;
 
 namespace Example2D.CreepyAlchemist.Runtime.Configs.Gameplay {
     [Serializable]
-    [ConfigName("Gameplay/Items")]
-    public class ItemData {
+    [ConfigName("Gameplay/InventoryConfig")]
+    public class InventoryConfigData {
         [JsonProperty("id")] public readonly string Id;
-        [JsonProperty("base_cost")] public float BaseCost;
+        [JsonProperty("cells")] public int Cells;
     }
 }

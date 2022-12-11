@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
+namespace Example2D.Common.Runtime.UI.Drag {
     public class DropReceiver : MonoBehaviour {
         public bool Enabled { get; private set; }
 

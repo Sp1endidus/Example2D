@@ -1,10 +1,8 @@
 {
-    "name": "CreepyAlchemist.Runtime.Gameplay.Model",
-    "rootNamespace": "Example2D.CreepyAlchemist.Runtime.Gameplay.Model",
+    "name": "Common.Runtime.Core",
+    "rootNamespace": "Example2D.Common.Runtime.Core",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:6329ab7ed772fcd459f170004b1e6abd",
-        "GUID:53cb139a92e43214db4ff2fd02f1f6e9"
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

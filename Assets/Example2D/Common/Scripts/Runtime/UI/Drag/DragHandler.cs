@@ -1,7 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
+namespace Example2D.Common.Runtime.UI.Drag {
     public class DragHandler : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
         private IDraggable _draggable;
@@ -33,5 +34,9 @@ namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
         bool CanBeginDrag { get; }
         void Hide();
         void Show();
+        void HandleDrag();
+        void HandleDrop();
+        event Action OnDrag;
+        event Action OnDrop;
     }
 }

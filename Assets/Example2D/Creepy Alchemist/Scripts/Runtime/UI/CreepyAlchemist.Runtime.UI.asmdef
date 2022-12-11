@@ -3,8 +3,14 @@
     "rootNamespace": "Example2D.CreepyAlchemist.Runtime.UI",
     "references": [
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6329ab7ed772fcd459f170004b1e6abd",
         "GUID:cd2d6c7c74003064cb0b6c7f8c380ebb",
-        "GUID:db4c6629f56a1f346bfbf92055f05ec7"
+        "GUID:1ca6d506c7089464a9f5260c9d70a4c2",
+        "GUID:108ee178b48315f48a5c340cc1455d2b",
+        "GUID:db4c6629f56a1f346bfbf92055f05ec7",
+        "GUID:6d2152cf2b34a4e4d9b808d5eb8f57ca",
+        "GUID:f6ad7433743ead04cb3ab3882ba19681"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

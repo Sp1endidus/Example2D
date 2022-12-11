@@ -26,6 +26,7 @@ namespace Example2D.Common.Editor.Googlesheets {
     }
 
     public enum SpreadsheetParserType {
-        Default
+        DefaultDict,
+        DefaultArray
     }
 }

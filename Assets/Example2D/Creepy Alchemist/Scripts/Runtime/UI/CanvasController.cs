@@ -1,4 +1,4 @@
-using Example2D.CreepyAlchemist.Runtime.Signals.Common;
+using Example2D.Common.Runtime.Signals;
 using UnityEngine;
 using Zenject;
 

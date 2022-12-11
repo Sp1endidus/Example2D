@@ -18,6 +18,14 @@ MonoBehaviour:
     <SpreadsheetId>k__BackingField: 19iiM_HJle75fGJ9cmvrdXF9yGawuakQdA0-cd6NCBoE
     <Sheets>k__BackingField:
     - <Name>k__BackingField: Items
-      <SheetId>k__BackingField: 1117750057
+      <SheetId>k__BackingField: 957308181
       <Range>k__BackingField: 
       <Parser>k__BackingField: 0
+    - <Name>k__BackingField: InventoryConfig
+      <SheetId>k__BackingField: 89148530
+      <Range>k__BackingField: A2:B4
+      <Parser>k__BackingField: 0
+    - <Name>k__BackingField: InventoryPreset
+      <SheetId>k__BackingField: 89148530
+      <Range>k__BackingField: A6:B19
+      <Parser>k__BackingField: 1

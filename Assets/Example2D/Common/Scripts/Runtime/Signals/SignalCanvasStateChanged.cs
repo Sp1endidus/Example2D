@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Example2D.CreepyAlchemist.Runtime.Signals.Common {
+namespace Example2D.Common.Runtime.Signals {
     public readonly struct SignalCanvasStateChanged {
         public readonly Canvas Canvas;
         public readonly bool Enabled;

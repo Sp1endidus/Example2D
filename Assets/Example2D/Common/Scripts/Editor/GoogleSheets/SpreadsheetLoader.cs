@@ -44,16 +44,23 @@ namespace Example2D.Common.Editor.Googlesheets {
 
         public string Load(ISpreadsheetParser parser, string spreadsheetId, int sheetId, string range) {
             var sheetData = LoadSheet(spreadsheetId, sheetId, range);
-            string result = parser.Parse(sheetId, sheetData);
+            string result = parser.Parse(sheetData);
             return result;
         }
 
         private IList<IList<object>> LoadSheet(string spreadsheetId, int sheetId, string range = "") {
-            if (string.IsNullOrEmpty(range)) {
-                range = "1:10000";
+            string sheetArgs = GetSheetNameById(spreadsheetId, sheetId);
+            if (sheetArgs == null) {
+                Debug.LogError($"sheet id [{sheetId}] not found!");
+                return null;
             }
 
-            var request = _sheetsService.Spreadsheets.Values.Get(spreadsheetId, range);
+            if (!string.IsNullOrEmpty(range)) {
+                sheetArgs += $"!{range}";
+            }
+
+            Debug.Log($"Load sheet args [{sheetArgs}]");
+            var request = _sheetsService.Spreadsheets.Values.Get(spreadsheetId, sheetArgs);
             request.ValueRenderOption = ValueRenderOptionEnum.FORMATTEDVALUE;
             request.DateTimeRenderOption = DateTimeRenderOptionEnum.SERIALNUMBER;
             request.MajorDimension = MajorDimensionEnum.ROWS;

@@ -1,12 +1,12 @@
+using Example2D.Common.Runtime.Signals;
 using Example2D.Common.Runtime.Utils;
-using Example2D.CreepyAlchemist.Runtime.Signals.Common;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
+namespace Example2D.Common.Runtime.UI.Drag {
     public class DragController : MonoBehaviour {
         [SerializeField] private Transform draggableParent;
 
@@ -57,6 +57,7 @@ namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
                 _originalPosition = _screenDraggable.Transform.position;
                 _screenDraggable.Transform.SetParent(draggableParent);
             }
+            _sourceDraggable.HandleDrag();
         }
 
         public void HandleDrag(PointerEventData eventData) {
@@ -108,6 +109,7 @@ namespace Example2D.CreepyAlchemist.Runtime.UI.Common {
             } else {
             }
 
+            _sourceDraggable.HandleDrop();
             _sourceDraggable = null;
             _screenDraggable = null;
         }

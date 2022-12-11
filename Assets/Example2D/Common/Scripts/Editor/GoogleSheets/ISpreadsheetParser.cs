@@ -4,6 +4,6 @@ using UnityEngine;
 
 namespace Example2D.Common.Editor.Googlesheets {
     public interface ISpreadsheetParser {
-        string Parse(int sheedId, IList<IList<object>> sheetData);
+        string Parse(IList<IList<object>> sheetData);
     }
 }

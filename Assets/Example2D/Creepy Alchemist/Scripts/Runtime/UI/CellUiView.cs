@@ -1,8 +1,8 @@
-using Example2D.CreepyAlchemist.Runtime.UI.Common;
+using Example2D.Common.Runtime.UI.Drag;
 using UnityEngine;
 
 namespace Example2D.CreepyAlchemist.Runtime.UI {
-    public class InventoryCellUiView : MonoBehaviour {
+    public class CellUiView : MonoBehaviour {
         [SerializeField] private DropReceiver dropReceiver;
 
         private IDraggable _currentDraggable;
@@ -19,6 +19,12 @@ namespace Example2D.CreepyAlchemist.Runtime.UI {
             _currentDraggable = draggable;
             _currentDraggable.Transform.SetParent(transform);
             ((RectTransform)_currentDraggable.Transform).anchoredPosition = Vector3.zero;
+            _currentDraggable.OnDrop += ItemRemoved;
+        }
+
+        private void ItemRemoved() {
+            _currentDraggable.OnDrop -= ItemRemoved;
+            _currentDraggable = null;
         }
     }
 }
