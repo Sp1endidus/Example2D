@@ -3,6 +3,7 @@
     "rootNamespace": "Example2D.CreepyAlchemist.Runtime.Gameplay",
     "references": [
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:cd2d6c7c74003064cb0b6c7f8c380ebb",
         "GUID:6329ab7ed772fcd459f170004b1e6abd",
         "GUID:53cb139a92e43214db4ff2fd02f1f6e9",

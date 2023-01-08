@@ -8,5 +8,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Example2D/Common/Scenes/Bootstrap.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Core.unity
+    guid: 17099a8703b4acc42ad56fa23dbf322d
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Core_UI.unity
+    guid: ee0c5355f2355db4cb45c5a6c451b5df
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Gameplay.unity
+    guid: b90ac24341d44d74c9cd805bb3f4c3c2
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Gameplay_UI.unity
+    guid: fd376d1c72cfa6043902dbb6549d51bf
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Audio.unity
+    guid: 83b376a83c30f794789dac3bd49ff6f0
+  - enabled: 1
+    path: Assets/Example2D/Creepy Alchemist/Scenes/Preloader.unity
+    guid: 5764b21ce49d5a7469b7277c7092e396
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 76ce3128499d8ab48a4540785ce381cd, type: 2}

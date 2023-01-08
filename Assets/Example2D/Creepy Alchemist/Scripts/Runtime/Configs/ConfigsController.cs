@@ -16,6 +16,7 @@ namespace Example2D.CreepyAlchemist.Runtime.Configs {
             Gameplay = new GameplayConfigsController();
             Gameplay.Initialize();
 
+            Logs.Log($"Initialize configs... DONE");
             IsLoaded = true;
         }
     }

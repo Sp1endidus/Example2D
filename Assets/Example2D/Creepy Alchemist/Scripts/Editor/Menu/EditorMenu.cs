@@ -1,4 +1,5 @@
 using Example2D.Common.Editor.Googlesheets;
+using Example2D.CreepyAlchemist.Runtime.Configs;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -38,6 +39,7 @@ namespace Example2D.CreepyAlchemist.Editor {
         private static void PullGameplay() {
             EditorUtility.DisplayProgressBar("Pulling", "Pulling Google Sheet", 0.5f);
             GoogleSheetLoader.Pull(Settings, "Gameplay");
+            EditorConfigsController.Reset();
             EditorUtility.ClearProgressBar();
 
         }

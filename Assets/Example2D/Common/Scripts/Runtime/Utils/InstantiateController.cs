@@ -33,5 +33,26 @@ namespace Example2D.Common.Runtime.Utils {
                 callback(result.Result.GetComponent<T>());
             };
         }
+
+        public static T LoadAsset<T>(string addressablePath) {
+            var asyncOperation = Addressables.LoadAssetAsync<T>(addressablePath);
+            return asyncOperation.WaitForCompletion();
+        }
+
+        public static void LoadAssetAsync<T>(string addressablePath,
+            Action<T> callback) {
+            var asyncOperation = Addressables.LoadAssetAsync<T>(addressablePath);
+            asyncOperation.Completed += result => {
+                callback(result.Result);
+            };
+        }
+
+        public static bool AssetExists(object key, Type type) {
+            foreach (var locator in Addressables.ResourceLocators) {
+                if (locator.Locate(key, type, out var locs))
+                    return true;
+            }
+            return false;
+        }
     }
 }

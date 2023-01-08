@@ -3,6 +3,7 @@ using Example2D.Common.Runtime.UI.Drag;
 using Example2D.CreepyAlchemist.Runtime.Gameplay.Model;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Example2D.CreepyAlchemist.Runtime.UI {
@@ -14,16 +15,16 @@ namespace Example2D.CreepyAlchemist.Runtime.UI {
         }
 
         public bool IsScreenObj => true;
-        public string ScreenPrefabPath => "";
         public Transform Transform => transform;
         public GameObject GameObject => gameObject;
 
         [SerializeField] private GameObject visualRoot;
+        [SerializeField] private Image icon;
 
         private ItemModel _itemModel;
 
         public event Action OnDrag;
-        public event Action OnDrop;
+        public event Action<bool> OnDrop;
 
         public bool CanBeginDrag {
             get {
@@ -46,6 +47,7 @@ namespace Example2D.CreepyAlchemist.Runtime.UI {
 
         public void Reset(IInventoryItem itemModel, Transform parent) {
             _itemModel = itemModel as ItemModel;
+            icon.sprite = _itemModel.ItemSO.UiIcon;
             transform.SetParent(parent);
         }
 
@@ -53,8 +55,12 @@ namespace Example2D.CreepyAlchemist.Runtime.UI {
             OnDrag?.Invoke();
         }
 
-        public void HandleDrop() {
-            OnDrop?.Invoke();
+        public void HandleDrop(bool result) {
+            OnDrop?.Invoke(result);
+        }
+
+        public IDraggable InstantiateScreenDraggable(Transform parent) {
+            return this;
         }
     }
 }

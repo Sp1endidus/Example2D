@@ -28,7 +28,8 @@ namespace Example2D.CreepyAlchemist.Runtime.UI {
 
             for (int i = 0; i < _inventoryController.Cells.Count; i++) {
                 if (_inventoryController.Cells[i].HasItem) {
-                    _itemViewsPool.Spawn(_inventoryController.Cells[i].Item, cells[i].transform);
+                    var itemUiView = _itemViewsPool.Spawn(_inventoryController.Cells[i].Item, cells[i].transform);
+                    cells[i].Receive(itemUiView, Vector2.zero);
                 }
             }
         }

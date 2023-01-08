@@ -2,7 +2,8 @@
     "name": "CreepyAlchemist.Editor",
     "rootNamespace": "Example2D.CreepyAlchemist.Editor",
     "references": [
-        "GUID:f675b79805e14b945b5b820511da8e3e"
+        "GUID:f675b79805e14b945b5b820511da8e3e",
+        "GUID:53cb139a92e43214db4ff2fd02f1f6e9"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -46,9 +46,7 @@ namespace Example2D.Common.Runtime.UI.Drag {
             _sourceDraggable = draggable;
 
             if (!draggable.IsScreenObj) {
-                _screenDraggable = InstantiateController
-                    .InstantiateGameObject(_sourceDraggable.ScreenPrefabPath, draggableParent)
-                    .GetComponent<IDraggable>();
+                _screenDraggable = draggable.InstantiateScreenDraggable(draggableParent);
                 _screenDraggable.Transform.position = _sourceDraggable.Transform.position;
                 _sourceDraggable.Hide();
             } else {
@@ -109,7 +107,7 @@ namespace Example2D.Common.Runtime.UI.Drag {
             } else {
             }
 
-            _sourceDraggable.HandleDrop();
+            _sourceDraggable.HandleDrop(receiveResult);
             _sourceDraggable = null;
             _screenDraggable = null;
         }

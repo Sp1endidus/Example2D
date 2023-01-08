@@ -28,15 +28,15 @@ namespace Example2D.Common.Runtime.UI.Drag {
 
     public interface IDraggable {
         bool IsScreenObj { get; }
-        string ScreenPrefabPath { get; }
         Transform Transform { get; }
         GameObject GameObject { get; }
         bool CanBeginDrag { get; }
         void Hide();
         void Show();
         void HandleDrag();
-        void HandleDrop();
+        void HandleDrop(bool result);
         event Action OnDrag;
-        event Action OnDrop;
+        event Action<bool> OnDrop;
+        IDraggable InstantiateScreenDraggable(Transform parent);
     }
 }

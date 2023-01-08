@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b8184777dff254ea636d06d7e4fd09, type: 3}
+  m_Name: Items Settings
+  m_EditorClassIdentifier: 
+  items:
+  - id: skull
+    uiIcon: {fileID: 21300000, guid: f3e11d347b7a5e74ea39ea3e167860fe, type: 3}
+  - id: brain
+    uiIcon: {fileID: 21300000, guid: 71c50aaf77e0be74d8738cfdf0d829bc, type: 3}

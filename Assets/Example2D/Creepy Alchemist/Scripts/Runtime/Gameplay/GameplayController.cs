@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Example2D.Common.Runtime.Core.Inventory;
 using Example2D.CreepyAlchemist.Runtime.Configs;
 using Example2D.CreepyAlchemist.Runtime.Gameplay.Model;
@@ -27,7 +28,9 @@ namespace Example2D.CreepyAlchemist.Runtime.Gameplay {
             _inventoryCellsPool = inventoryCellsPool;
         }
 
-        public void Initialize() {
+        public async void Initialize() {
+            await UniTask.WaitUntil(() => _itemsController.Initialized);
+
             _inventoryController.Initialize(_configsController.Gameplay.InventoryConfig.Cells,
                 () => _inventoryCellsPool.Spawn());
 
