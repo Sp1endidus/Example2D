@@ -21,11 +21,16 @@ namespace Example2D.Common.Editor.InspectorTools {
 
             int index = 0;
             bool hasMatch = false;
-            for (int i = 0; i < values.Length; i++) {
-                if (values[i] == property.stringValue) {
-                    index = i;
-                    hasMatch = true;
-                    break;
+            if (string.IsNullOrEmpty(property.stringValue)) {
+                index = 0;
+                hasMatch = true;
+            } else {
+                for (int i = 0; i < values.Length; i++) {
+                    if (values[i] == property.stringValue) {
+                        index = i;
+                        hasMatch = true;
+                        break;
+                    }
                 }
             }
 
